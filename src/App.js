@@ -9,8 +9,12 @@ import { useState } from 'react';
 function App() {
   const [todoItems, setTodoItems] = useState(todoList);
 
+  // TODO - add image background
   return (
-    <div className="App ">
+    <div
+      className="App bg-[url('../assets/images/bg-desktop-light.jpg
+    ')] no-repeat bg-cover "
+    >
       <div className="container max-w-lg mx-auto mt-12">
         <Header></Header>
         <TodoInput />

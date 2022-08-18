@@ -4,10 +4,14 @@
 
 @layer base {
   html {
-    font-family: "Josefin Sans";
+    font-family: 'Josefin Sans';
   }
 }
 
 body {
   background-color: hsl(0, 0%, 98%);
+}
+
+#gradient-checkbox:checked {
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
