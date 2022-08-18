@@ -1,12 +1,11 @@
+import ToDoItem from './ToDoItem';
 function TodoList({ todoItems }) {
   //TODO - refactor to include todoitem component
   return (
     <div>
-      <ul className="shadow-lg shadow-slate-100">
-        {todoItems.map((item) => (
-          <li key={item.id}>{item.text}</li>
-        ))}
-      </ul>
+      {todoItems.map((item) => (
+        <ToDoItem key={item.id}>{item.text}</ToDoItem>
+      ))}
     </div>
   );
 }
