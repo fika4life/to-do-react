@@ -1,9 +1,10 @@
+import ToDoItem from "./ToDoItem";
 function TodoList({ todoItems }) {
   //TODO - refactor to include todoitem component
   return (
     <div>
       {todoItems.map((item) => (
-        <p key={item.id}>{item.text}</p>
+        <ToDoItem key={item.id} item={item}></ToDoItem>
       ))}
     </div>
   );
