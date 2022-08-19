@@ -2,13 +2,19 @@ import { useState } from 'react';
 
 export default function TodoInput() {
   const [textInput, setTextInput] = useState('');
+
   const handleTextInput = (e) => {
     setTextInput(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(textInput);
+  };
+
   return (
     // TODO - add ability to add toditem
-    <form className="mb-4">
+    <form className="mb-4" onSubmit={handleSubmit}>
       <input
         onChange={handleTextInput}
         type="text"
