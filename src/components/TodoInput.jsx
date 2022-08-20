@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function TodoInput() {
+export default function TodoInput({ addTodo }) {
   const [textInput, setTextInput] = useState('');
 
   const handleTextInput = (e) => {
@@ -9,7 +9,13 @@ export default function TodoInput() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(textInput);
+
+    let newTodo = {
+      text: textInput
+    };
+    addTodo(newTodo);
+
+    setTextInput('');
   };
 
   return (

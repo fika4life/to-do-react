@@ -1,5 +1,7 @@
 // TODO - style checkboxes
 // TODO - add styles to crossed out items
+// TODO - add x button on hover
+// TODO - add ability to delete items
 function ToDoItem({ item }) {
   return (
     <li className="py-4 px-4 flex items-center text-veryDarkGrayishBlue text-lg ">

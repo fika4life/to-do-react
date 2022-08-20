@@ -10,6 +10,13 @@ import { v4 as uuidv4 } from 'uuid';
 function App() {
   const [todoItems, setTodoItems] = useState(todoList);
 
+  const addTodo = (newTodo) => {
+    newTodo.id = uuidv4();
+
+    setTodoItems([newTodo, ...todoItems]);
+    console.log(todoItems);
+  };
+
   // TODO - add image background
   return (
     <div
@@ -18,9 +25,12 @@ function App() {
     >
       <div className="container max-w-lg mx-auto mt-12">
         <Header></Header>
-        <TodoInput />
+        <TodoInput addTodo={addTodo} />
         <TodoList todoItems={todoItems} />
-        <ActionBar />
+        <ActionBar className="relative" />
+        <p className="max-w-sm mx-auto text-center mt-10 text-darkGrayishBlue text-sm">
+          Drag and drop to reorder list
+        </p>
       </div>
     </div>
   );
