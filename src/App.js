@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App ">
       <div className="bg-hero-image no-repeat bg-cover w-screen h-72 absolute top-0 left-0 -z-50"></div>
-      <div className="container max-w-lg mx-auto mt-24">
+      <div className="container max-w-lg mx-auto mt-16">
         <Header></Header>
         <TodoInput addTodo={addTodo} />
         <TodoList todoItems={todoItems} />
