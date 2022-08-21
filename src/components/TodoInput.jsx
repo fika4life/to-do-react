@@ -11,7 +11,8 @@ export default function TodoInput({ addTodo }) {
     e.preventDefault();
 
     let newTodo = {
-      text: textInput
+      text: textInput,
+      completed: false
     };
     addTodo(newTodo);
 

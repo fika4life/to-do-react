@@ -1,12 +1,16 @@
 import ToDoItem from './ToDoItem';
-function TodoList({ todoItems }) {
+function TodoList({ todoItems, handleDelete }) {
   return (
     <ul className="border border-b-0 rounded-md bg-white shadow-xl shadow-slate-200 divide-y divide-slate-200">
-      {todoItems.map((item) => (
-        <ToDoItem key={item.id} item={item}>
-          {item.text}
-        </ToDoItem>
-      ))}
+      {todoItems.length !== 0 ? (
+        todoItems.map((item) => (
+          <ToDoItem key={item.id} item={item} handleDelete={handleDelete} />
+        ))
+      ) : (
+        <li className="py-4 px-4 flex items-center text-amber-800 text-lg text-center">
+          No items to show. Add items above.
+        </li>
+      )}
     </ul>
   );
 }

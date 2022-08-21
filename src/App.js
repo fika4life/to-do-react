@@ -17,6 +17,12 @@ function App() {
     console.log(todoItems);
   };
 
+  const deleteTodo = (id) => {
+    const remainingTodos = todoItems.filter((item) => item.id !== id);
+
+    setTodoItems(remainingTodos);
+  };
+
   // TODO - add image background
   return (
     <div className="App ">
@@ -24,7 +30,7 @@ function App() {
       <div className="container max-w-lg mx-auto mt-16">
         <Header></Header>
         <TodoInput addTodo={addTodo} />
-        <TodoList todoItems={todoItems} />
+        <TodoList todoItems={todoItems} handleDelete={deleteTodo} />
         <ActionBar className="relative" />
         <p className="max-w-sm mx-auto text-center mt-10 text-darkGrayishBlue text-sm">
           Drag and drop to reorder list
