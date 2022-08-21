@@ -23,7 +23,8 @@ function App() {
     setTodoItems(remainingTodos);
   };
 
-  // TODO - add image background
+  const uncompletedItems = todoItems.filter((item) => item.completed !== true);
+
   return (
     <div className="App ">
       <div className="bg-hero-image no-repeat bg-cover w-screen h-72 absolute top-0 left-0 -z-50"></div>
@@ -31,7 +32,7 @@ function App() {
         <Header></Header>
         <TodoInput addTodo={addTodo} />
         <TodoList todoItems={todoItems} handleDelete={deleteTodo} />
-        <ActionBar className="relative" />
+        <ActionBar nrItems={uncompletedItems.length} />
         <p className="max-w-sm mx-auto text-center mt-10 text-darkGrayishBlue text-sm">
           Drag and drop to reorder list
         </p>
