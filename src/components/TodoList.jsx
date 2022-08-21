@@ -1,5 +1,5 @@
 import ToDoItem from './ToDoItem';
-function TodoList({ todoItems, handleDelete }) {
+function TodoList({ todoItems, handleDelete, handleChecked }) {
   return (
     <ul className="border border-b-0 rounded-t-md bg-white divide-y divide-slate-200">
       {todoItems.length !== 0 ? (
