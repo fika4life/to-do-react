@@ -32,7 +32,7 @@ export default function TodoInput({ addTodo }) {
         value={textInput}
         placeholder="Create a new todo"
         className="text-lg bg-white border border-veryLightGrayishBlue 
-        placeholder-darkGrayishBlue rounded-md  text-veryDarkGrayishBlue focus:no-outline block w-full p-3.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:no-outline pl-12
+        placeholder-darkGrayishBlue rounded-md  text-veryDarkGrayishBlue focus:no-outline block w-full p-3.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:no-outline pl-12 
         "
       />
     </form>
