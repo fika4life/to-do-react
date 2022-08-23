@@ -20,7 +20,7 @@ function ToDoItem({ item, handleDelete }) {
       <img
         src={CrossIcon}
         alt=""
-        className="w-[18px] h-[18px] absolute right-8  hidden group-hover:inline-block  "
+        className="w-[18px] h-[18px] absolute right-6  hidden group-hover:inline-block  "
         onClick={() => handleDelete(item.id)}
       />
     </li>
