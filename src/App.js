@@ -1,11 +1,12 @@
-import './App.css';
-import todoList from './data/data';
-import TodoInput from './components/TodoInput';
-import TodoList from './components/TodoList';
-import ActionBar from './components/ActionBar';
-import Header from './components/Header';
-import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import "./App.css";
+import todoList from "./data/data";
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
+import ActionBar from "./components/ActionBar";
+import Header from "./components/Header";
+import Filters from "./components/Filters";
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [todoItems, setTodoItems] = useState(todoList);
@@ -33,6 +34,7 @@ function App() {
         <TodoInput addTodo={addTodo} />
         <TodoList todoItems={todoItems} handleDelete={deleteTodo} />
         <ActionBar nrItems={uncompletedItems.length} />
+        <Filters></Filters>
         <p className="max-w-sm mx-auto text-center mt-10 text-darkGrayishBlue text-sm">
           Drag and drop to reorder list
         </p>
