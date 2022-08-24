@@ -1,12 +1,15 @@
-import './App.css';
-import todoList from './data/data';
-import TodoInput from './components/TodoInput';
-import TodoList from './components/TodoList';
-import ActionBar from './components/ActionBar';
-import Header from './components/Header';
-import Filters from './components/Filters';
-import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import "./App.css";
+import todoList from "./data/data";
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
+import ActionBar from "./components/ActionBar";
+import Header from "./components/Header";
+import Filters from "./components/Filters";
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+
+// TODO - add dark styles
+// TODO - add toggle capability
 
 function App() {
   const [todoItems, setTodoItems] = useState(todoList);

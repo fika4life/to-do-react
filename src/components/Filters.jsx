@@ -1,4 +1,6 @@
-import React from 'react';
+// TODO - add function to show all
+// TODO - add function to show completed
+// TODO - add function to show active
 
 function Filters() {
   return (
