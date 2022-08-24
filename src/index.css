@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-family: 'Josefin Sans';
+    font-family: "Josefin Sans";
   }
 }
 
@@ -13,5 +13,6 @@ body {
 }
 
 #gradient-checkbox:checked {
-  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background: url("./assets/images/icon-check.svg") no-repeat center center,
+    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
